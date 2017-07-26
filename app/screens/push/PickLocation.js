@@ -53,11 +53,11 @@ export default class PickLocation extends Component{
       <Header style={{backgroundColor: '#FFB55B'}}>
         <Left>
           <TouchableOpacity onPress={()=>this.props.navigator.pop()}>
-            <Icon name="arrow-back" style={{color: '#4285f4'}}/>
+            <Icon name="arrow-back" style={{color: '#4B515D'}}/>
           </TouchableOpacity>
         </Left>
         <Body>
-          <Text>Pick Location</Text>
+          <Text style={{color: '#4B515D'}}>Pick Location</Text>
         </Body>
         <Right/>
       </Header>
@@ -170,7 +170,7 @@ export default class PickLocation extends Component{
               }}
             >
               <Image
-                style={{width: 40, height: 40}}
+                style={{width: 120, height: 120}}
                 source={require('../../img/map-marker.png')}
               />
             </MapView.Marker>

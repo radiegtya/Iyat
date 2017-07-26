@@ -14,6 +14,7 @@ class Home extends Component {
         <Left/>
         <Body>
           <Text style={{fontWeight: 'bold', fontSize: 20, color: '#4B515D'}}>Iyat</Text>
+          <Text subtitle style={{color: '#4B515D'}}>Pilih Layanan</Text>
         </Body>
         <Right/>
       </Header>
@@ -31,7 +32,7 @@ class Home extends Component {
 
           {/* List */}
           <List>
-            {this.props.services.map((service, key) => <Service key={key} service={service} {...this.props} />)}
+            {this.props.services.map((service, i) => <Service key={i} service={service} {...this.props} />)}
           </List>
           {/* List End */}
 
@@ -47,10 +48,10 @@ class Home extends Component {
 const HomeContainer = createContainer((props) => {
   return {
     services: [
-      {name: "Tai Batita"},
-      {name: "Tai Imyut"},
-      {name: "Tai Terong/Cabe"},
-      {name: "Tai Gaban"},
+      {name: "Tai Batita", imageUri: 'https://trello-attachments.s3.amazonaws.com/597867348d5db8c191af9d7d/597867486c3b1aeef7423602/cae1b640705031a599b7a0d63bced56c/batita.png'},
+      {name: "Tai Balita", imageUri: 'https://trello-attachments.s3.amazonaws.com/597867348d5db8c191af9d7d/597867486c3b1aeef7423602/2d3e15b5da4c61ade72eb4db0b409a15/balita.png'},
+      {name: "Tai Dewasa", imageUri: 'https://trello-attachments.s3.amazonaws.com/597867348d5db8c191af9d7d/597867486c3b1aeef7423602/29ee6f9d07b7c31233a381974339d8cf/remaja.png'},
+      {name: "Tai Remaja", imageUri: 'https://trello-attachments.s3.amazonaws.com/597867348d5db8c191af9d7d/597867486c3b1aeef7423602/9b9526234efa17bf0ee4035b364e1251/dewasa.png'},
     ]
   }
 }, Home);
