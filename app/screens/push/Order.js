@@ -26,6 +26,14 @@ export default class Order extends Component{
     )
   }
 
+  componentDidMount(){
+    const {status} = this.props;
+
+    if(status == "pending"){
+      alert("Yay, We found You an Iyat's Truck!");
+    }
+  }
+
   render(){
     const {address} = this.props;
 
@@ -60,6 +68,16 @@ export default class Order extends Component{
               </Left>
               <Body>
                 <Text>{address.length > 50? address.substr(0, 50) + "...": address}</Text>
+              </Body>
+              <Right/>
+            </ListItem>
+
+            <ListItem icon>
+              <Left>
+                <Icon name="pricetag" style={{color: '#046CE3'}} />
+              </Left>
+              <Body>
+                <Text>{'IDR 100.000'}</Text>
               </Body>
               <Right/>
             </ListItem>

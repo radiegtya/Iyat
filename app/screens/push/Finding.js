@@ -23,9 +23,12 @@ export default class Finding extends Component{
     setTimeout(()=>{
       self.props.navigator.push({
         screen: 'push.Order',
-        passProps: {...self.props}
+        passProps: {
+          status: 'pending',
+          ...self.props
+        }
       })
-    }, 2000);
+    }, 5000);
   }
 
   render(){
@@ -35,7 +38,7 @@ export default class Finding extends Component{
       <View style={styles.container}>
         <H2 style={{marginBottom: 50}}>{"Finding Iyat's Truck"}</H2>
 
-        <Image style={{width: 150, height: 100}} source={require('../../img/map-marker.png')}/>
+        <Image style={{width: 250, height: 100}} source={require('../../img/truck.png')}/>
 
         {isLoading?
           (
