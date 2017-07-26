@@ -47,8 +47,6 @@ export default class PickLocation extends Component{
   }
 
   _renderHeader(){
-    const {latitude, longitude} = this.state;
-    const validationCondition = latitude != "" && longitude != "";
     return (
       <Header style={{backgroundColor: '#FFB55B'}}>
         <Left>
@@ -68,33 +66,40 @@ export default class PickLocation extends Component{
     this.setState({ region });
   }
 
-  onRegionChangeComplete(region) {
-    if(region.latitude != 0){
-      let params = {
-        key: 'AIzaSyCP80Q20eVfyxuQH1-Walp0jjatku8nvf4',
-        latlng: `${region.latitude},${region.longitude}`,
-      };
+  _getAddressUsingGeocoder(latitude, longitude){
+    let params = {
+      key: 'AIzaSyCP80Q20eVfyxuQH1-Walp0jjatku8nvf4',
+      latlng: `${latitude},${longitude}`,
+    };
 
-      fetch(
-        'https://maps.googleapis.com/maps/api/geocode/json?key='+ params.key+ '&latlng=' + params.latlng)
-          .then((res) => res.json())
-          .then((json) => {
-            if (json.status !== 'OK') {
-              throw new Error(`Geocode error: ${json.status}`);
-            }
-            this.GooglePlacesAutocompleteRef.setAddressText(json.results[0].formatted_address)
-          });
+    return fetch('https://maps.googleapis.com/maps/api/geocode/json?key='+ params.key+ '&latlng=' + params.latlng);
+  }
+
+  onRegionChangeComplete(region) {
+    const {latitude, longitude} = region;
+
+    if(latitude != 0){
+      this._getAddressUsingGeocoder(latitude, longitude).then(res=>res.json()).then(json=>{
+        const address = json.results[0].formatted_address;
+        this.GooglePlacesAutocompleteRef.setAddressText(address);
+      });
     }
   }
 
   handleSetLocation(res){
-    this.props.navigator.push({
-      screen: 'push.Finding',
-      passProps: {
-        latitude: res.coordinate.latitude,
-        longitude: res.coordinate.longitude,
-      }
-    })
+    const {latitude, longitude} = res.coordinate;
+
+    this._getAddressUsingGeocoder(latitude, longitude).then(res=>res.json()).then(json=>{
+      const address = json.results[0].formatted_address;
+      this.props.navigator.push({
+        screen: 'push.Finding',
+        passProps: {
+          latitude: latitude,
+          longitude: longitude,
+          address: address
+        }
+      });
+    });
   }
 
   render(){

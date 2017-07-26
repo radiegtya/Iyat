@@ -10,6 +10,7 @@ import SignIn from './push/SignIn';
 import PinVerification from './push/PinVerification';
 import PickLocation from './push/PickLocation';
 import Finding from './push/Finding';
+import Order from './push/Order';
 import ContactUs from './push/ContactUs';
 import Faq from './push/Faq';
 
@@ -24,6 +25,7 @@ export function registerScreens(){
   Navigation.registerComponent('push.PinVerification', ()=> PinVerification);
   Navigation.registerComponent('push.PickLocation', ()=> PickLocation);
   Navigation.registerComponent('push.Finding', ()=> Finding);
+  Navigation.registerComponent('push.Order', ()=> Order);
   Navigation.registerComponent('push.ContactUs', ()=> ContactUs);
   Navigation.registerComponent('push.Faq', ()=> Faq);
 }

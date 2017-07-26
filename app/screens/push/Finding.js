@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import {View, StyleSheet, TouchableOpacity, Image} from 'react-native';
 import { H2, Spinner, Text, Button } from 'native-base';
 
@@ -19,9 +19,13 @@ export default class Finding extends Component{
 
   componentDidMount(){
     const self = this;
+    // alert(self.props.address)
     setTimeout(()=>{
-      self.setState({isLoading: false, isFound: true});
-    }, 4000);
+      self.props.navigator.push({
+        screen: 'push.Order',
+        passProps: {...self.props}
+      })
+    }, 2000);
   }
 
   render(){
@@ -47,6 +51,12 @@ export default class Finding extends Component{
   }
 
 }
+
+Finding.propTypes = {
+  latitude: PropTypes.number,
+  longitude: PropTypes.number,
+  address: PropTypes.string
+};
 
 const styles = StyleSheet.create({
     container:{

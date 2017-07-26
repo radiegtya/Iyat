@@ -16,6 +16,7 @@ export default class Service extends Component{
       <ListItem onPress={()=>this.handleOrder()}>
         <Body>
           <Text title>{service.name}</Text>
+          <Text note>{service.price}</Text>
         </Body>
         <Thumbnail style={{width: 120, height: 120}} source={{uri: service.imageUri}} />
       </ListItem>
