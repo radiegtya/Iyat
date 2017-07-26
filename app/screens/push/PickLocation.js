@@ -7,16 +7,17 @@ import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete'
 
 
 const { width, height } = Dimensions.get('window');
-const latitudeDelta = 0.04250270688370961;  
+const latitudeDelta = 0.04250270688370961;
 
 export default class PickLocation extends Component{
 
   constructor(){
     super();
     this.state = {
+      address: '',
       region: {
-        latitude: -6.1955531,
-        longitude: 106.799552,
+        latitude: 0,
+        longitude: 0,
         latitudeDelta: latitudeDelta,
         longitudeDelta:  latitudeDelta * (width / height),
       },
@@ -25,14 +26,30 @@ export default class PickLocation extends Component{
 
   static navigatorStyle = {
     navBarHidden: true,
-    tabBarHidden: true
+    tabBarHidden: true,
   };
+
+  componentDidMount(){
+    const self = this;
+    navigator.geolocation.getCurrentPosition((res)=>{
+      const {latitude, longitude} = res.coords;
+
+      self.setState({
+        region: {
+          latitude: latitude,
+          longitude: longitude,
+          latitudeDelta: latitudeDelta,
+          longitudeDelta:  latitudeDelta * (width / height),
+        }
+      })
+    })
+  }
 
   _renderHeader(){
     const {latitude, longitude} = this.state;
     const validationCondition = latitude != "" && longitude != "";
     return (
-      <Header>
+      <Header style={{backgroundColor: '#FFB55B'}}>
         <Left>
           <TouchableOpacity onPress={()=>this.props.navigator.pop()}>
             <Icon name="arrow-back" style={{color: '#4285f4'}}/>
@@ -46,13 +63,30 @@ export default class PickLocation extends Component{
     )
   }
 
-  onRegionChange(region) {
+  onRegionChange(region){
     this.setState({ region });
   }
 
-  render(){
-    const {displaySearch} = this.state;
+  onRegionChangeComplete(region) {
+    if(region.latitude != 0){
+      let params = {
+        key: 'AIzaSyCP80Q20eVfyxuQH1-Walp0jjatku8nvf4',
+        latlng: `${region.latitude},${region.longitude}`,
+      };
 
+      fetch(
+        'https://maps.googleapis.com/maps/api/geocode/json?key='+ params.key+ '&latlng=' + params.latlng)
+          .then((res) => res.json())
+          .then((json) => {
+            if (json.status !== 'OK') {
+              throw new Error(`Geocode error: ${json.status}`);
+            }
+            this.GooglePlacesAutocompleteRef.setAddressText(json.results[0].formatted_address)
+          });
+    }
+  }
+
+  render(){
     return (
       <View style={styles.container}>
 
@@ -62,15 +96,22 @@ export default class PickLocation extends Component{
 
         <View style={styles.search}>
           <GooglePlacesAutocomplete
+            ref={(ref) => this.GooglePlacesAutocompleteRef = ref}
             placeholder='Enter Location'
             minLength={2}
             autoFocus={false}
             returnKeyType={'default'}
             fetchDetails={true}
             onPress={(data, details = null) => { // 'details' is provided when fetchDetails = true
-              this.setState({displaySearch: false})
-              console.log(data);
-              console.log(details.geometry.location);
+              const {lat, lng} = details.geometry.location;
+              this.setState({
+                region: {
+                  latitude: lat,
+                  longitude: lng,
+                  latitudeDelta: latitudeDelta,
+                  longitudeDelta:  latitudeDelta * (width / height),
+                }
+              })
             }}
             query={{
               // available options: https://developers.google.com/places/web-service/autocomplete
@@ -110,8 +151,10 @@ export default class PickLocation extends Component{
         <MapView
           style={styles.map}
           onRegionChange={this.onRegionChange.bind(this)}
+          onRegionChangeComplete={this.onRegionChangeComplete.bind(this)}
           showsUserLocation={true}
           region={this.state.region}
+          initialRegion={this.state.region}
         >
 
             <MapView.Marker
@@ -143,7 +186,7 @@ const styles = StyleSheet.create({
     bottom: 0,
     justifyContent: 'flex-end',
     alignItems: 'center',
-    backgroundColor: '#FFB55B'
+    backgroundColor: '#282C34'
   },
   header: {
     position: 'absolute',

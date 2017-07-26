@@ -39,6 +39,7 @@
 		5138DFF51F22CC2500B2EF91 /* libReactNativeNavigation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5138DFF41F22CC1400B2EF91 /* libReactNativeNavigation.a */; };
 		5138E0261F231D7200B2EF91 /* libRCTContacts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5138E00A1F231D6200B2EF91 /* libRCTContacts.a */; };
 		51884CC81F28129300FB9DD3 /* libAirMaps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51884CA81F28128000FB9DD3 /* libAirMaps.a */; };
+		51884CD11F284D8100FB9DD3 /* libRNGeocoder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51884CD01F284D7400FB9DD3 /* libRNGeocoder.a */; };
 		5584E71DDD3A46608B87C06D /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C926013342A84728AD2E5316 /* Zocial.ttf */; };
 		58C4D4D77737442EB9CE44A4 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4275B2AECF57418C979EDF8F /* Ionicons.ttf */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
@@ -264,6 +265,13 @@
 			remoteGlobalIDString = 11FA5C511C4A1296003AC2EE;
 			remoteInfo = AirMaps;
 		};
+		51884CCF1F284D7400FB9DD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51884CCB1F284D7400FB9DD3 /* RNGeocoder.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BF8FCF941BFFB184000FCD37;
+			remoteInfo = RNGeocoder;
+		};
 		5E9157321DD0AC6500FF2AA8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */;
@@ -323,6 +331,7 @@
 		5138DFCA1F22CC1300B2EF91 /* ReactNativeNavigation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeNavigation.xcodeproj; path = "../node_modules/react-native-navigation/ios/ReactNativeNavigation.xcodeproj"; sourceTree = "<group>"; };
 		5138E0021F231D6200B2EF91 /* RCTContacts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTContacts.xcodeproj; path = "../node_modules/react-native-contacts/ios/RCTContacts.xcodeproj"; sourceTree = "<group>"; };
 		51884CA31F28128000FB9DD3 /* AirMaps.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AirMaps.xcodeproj; path = "../node_modules/react-native-maps/lib/ios/AirMaps.xcodeproj"; sourceTree = "<group>"; };
+		51884CCB1F284D7400FB9DD3 /* RNGeocoder.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNGeocoder.xcodeproj; path = "../node_modules/react-native-geocoder/ios/RNGeocoder.xcodeproj"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		6F3837736E944DFDB50C5AA0 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/native-base/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		735704BB5B7148BD8AF78138 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/native-base/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
@@ -352,6 +361,7 @@
 				5138DFF51F22CC2500B2EF91 /* libReactNativeNavigation.a in Frameworks */,
 				51884CC81F28129300FB9DD3 /* libAirMaps.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
+				51884CD11F284D8100FB9DD3 /* libRNGeocoder.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				5138E0261F231D7200B2EF91 /* libRCTContacts.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
@@ -525,6 +535,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		51884CCC1F284D7400FB9DD3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				51884CD01F284D7400FB9DD3 /* libRNGeocoder.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		5E91572E1DD0AC6500FF2AA8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -565,6 +583,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				51884CCB1F284D7400FB9DD3 /* RNGeocoder.xcodeproj */,
 				51884CA31F28128000FB9DD3 /* AirMaps.xcodeproj */,
 				5138E0021F231D6200B2EF91 /* RCTContacts.xcodeproj */,
 				5138DFCA1F22CC1300B2EF91 /* ReactNativeNavigation.xcodeproj */,
@@ -783,6 +802,10 @@
 					ProductGroup = 5138DFCB1F22CC1300B2EF91 /* Products */;
 					ProjectRef = 5138DFCA1F22CC1300B2EF91 /* ReactNativeNavigation.xcodeproj */;
 				},
+				{
+					ProductGroup = 51884CCC1F284D7400FB9DD3 /* Products */;
+					ProjectRef = 51884CCB1F284D7400FB9DD3 /* RNGeocoder.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -989,6 +1012,13 @@
 			fileType = archive.ar;
 			path = libAirMaps.a;
 			remoteRef = 51884CA71F28128000FB9DD3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		51884CD01F284D7400FB9DD3 /* libRNGeocoder.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNGeocoder.a;
+			remoteRef = 51884CCF1F284D7400FB9DD3 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */ = {
