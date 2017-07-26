@@ -7,7 +7,8 @@ import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete'
 
 
 const { width, height } = Dimensions.get('window');
-const latitudeDelta = 0.04250270688370961;
+// const latitudeDelta = 0.04250270688370961;
+const latitudeDelta = 0.009;
 
 export default class PickLocation extends Component{
 
@@ -114,11 +115,16 @@ export default class PickLocation extends Component{
               })
             }}
             query={{
-              // available options: https://developers.google.com/places/web-service/autocomplete
+                // available options: https://developers.google.com/places/web-service/autocomplete
               key: 'AIzaSyB9hkuAlByxQvx4DXuvSKGJnJuB91thFFo',
               language: 'en', // language of the results
-              types: '(cities)', // default: 'geocode'
+              types: '(regions)', // default: 'geocode'
+              components: 'country:id'
             }}
+            GooglePlacesSearchQuery={{
+             // available options for GooglePlacesSearch API : https://developers.google.com/places/web-service/search
+             rankby: 'distance',
+           }}
             styles={{
               textInputContainer: {
                 backgroundColor: '#FFF',

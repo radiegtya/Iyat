@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Container, Content, Header, Left, Body, Right, Text, Title, ListItem, List, Thumbnail, Item, Input, Icon, Form} from 'native-base';
 import {TouchableOpacity} from 'react-native';
 
-export default class Order extends Component {
+export default class Histories extends Component {
 
   _renderHeader(){
     return (

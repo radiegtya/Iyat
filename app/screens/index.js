@@ -1,41 +1,27 @@
 import {Navigation} from 'react-native-navigation';
 
 //import tabs screen
-import Order from './tabs/Order';
-import Contacts from './tabs/Contacts';
-import Chats from './tabs/Chats';
+import Home from './tabs/Home';
+import Histories from './tabs/Histories';
 import Settings from './tabs/Settings';
 
 //import push screen
 import SignIn from './push/SignIn';
 import PinVerification from './push/PinVerification';
 import PickLocation from './push/PickLocation';
-import NewContact from './push/NewContact';
-import Messages from './push/Messages';
-import NewChat from './push/NewChat';
-import NewGroup from './push/NewGroup';
-import NewGroupForm from './push/NewGroupForm';
-import ChatInfo from './push/ChatInfo';
 import ContactUs from './push/ContactUs';
 import Faq from './push/Faq';
 
 export function registerScreens(){
   //tabs
-  Navigation.registerComponent('tabs.Order', ()=> Order);
-  Navigation.registerComponent('tabs.Contacts', ()=> Contacts);
-  Navigation.registerComponent('tabs.Chats', ()=> Chats);
+  Navigation.registerComponent('tabs.Home', ()=> Home);
+  Navigation.registerComponent('tabs.Histories', ()=> Histories);
   Navigation.registerComponent('tabs.Settings', ()=> Settings);
 
   //push
   Navigation.registerComponent('push.SignIn', ()=> SignIn);
   Navigation.registerComponent('push.PinVerification', ()=> PinVerification);
   Navigation.registerComponent('push.PickLocation', ()=> PickLocation);
-  Navigation.registerComponent('push.NewContact', ()=> NewContact);
-  Navigation.registerComponent('push.Messages', ()=> Messages);
-  Navigation.registerComponent('push.NewChat', ()=> NewChat);
-  Navigation.registerComponent('push.NewGroup', ()=> NewGroup);
-  Navigation.registerComponent('push.NewGroupForm', ()=> NewGroupForm);
-  Navigation.registerComponent('push.ChatInfo', ()=> ChatInfo);
   Navigation.registerComponent('push.ContactUs', ()=> ContactUs);
   Navigation.registerComponent('push.Faq', ()=> Faq);
 }
@@ -53,8 +39,8 @@ export function startTabBasedApp(){
   Navigation.startTabBasedApp({
     tabs: [
       {
-        label: 'Order',
-        screen: 'tabs.Order', // this is a registered name for a screen
+        label: 'Home',
+        screen: 'tabs.Home', // this is a registered name for a screen
         title: 'Iyat',
         icon: require('../img/contacts-inactive.png'),
         selectedIcon: require('../img/contacts-active.png'), // iOS only
@@ -63,8 +49,8 @@ export function startTabBasedApp(){
         }
       },
       {
-        label: 'Chats',
-        screen: 'tabs.Chats',
+        label: 'Histories',
+        screen: 'tabs.Histories',
         title: 'Chats',
         icon: require('../img/chats-inactive.png'),
         selectedIcon: require('../img/chats-active.png'), // iOS only
@@ -83,5 +69,8 @@ export function startTabBasedApp(){
         }
       }
     ],
+    tabsStyle: {
+      tabBarBackgroundColor: '#282C34'
+    }
   });
 }
