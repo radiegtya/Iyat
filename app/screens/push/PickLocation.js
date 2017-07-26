@@ -87,6 +87,16 @@ export default class PickLocation extends Component{
     }
   }
 
+  handleSetLocation(res){
+    this.props.navigator.push({
+      screen: 'push.Finding',
+      passProps: {
+        latitude: res.coordinate.latitude,
+        longitude: res.coordinate.longitude,
+      }
+    })
+  }
+
   render(){
     return (
       <View style={styles.container}>
@@ -168,6 +178,7 @@ export default class PickLocation extends Component{
                 latitude: this.state.region.latitude,
                 longitude: this.state.region.longitude,
               }}
+              onPress={(e)=>this.handleSetLocation(e.nativeEvent)}
             >
               <Image
                 style={{width: 120, height: 120}}

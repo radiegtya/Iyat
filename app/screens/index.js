@@ -9,6 +9,7 @@ import Settings from './tabs/Settings';
 import SignIn from './push/SignIn';
 import PinVerification from './push/PinVerification';
 import PickLocation from './push/PickLocation';
+import Finding from './push/Finding';
 import ContactUs from './push/ContactUs';
 import Faq from './push/Faq';
 
@@ -22,6 +23,7 @@ export function registerScreens(){
   Navigation.registerComponent('push.SignIn', ()=> SignIn);
   Navigation.registerComponent('push.PinVerification', ()=> PinVerification);
   Navigation.registerComponent('push.PickLocation', ()=> PickLocation);
+  Navigation.registerComponent('push.Finding', ()=> Finding);
   Navigation.registerComponent('push.ContactUs', ()=> ContactUs);
   Navigation.registerComponent('push.Faq', ()=> Faq);
 }
