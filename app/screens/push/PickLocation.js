@@ -7,6 +7,7 @@ import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete'
 
 
 const { width, height } = Dimensions.get('window');
+const latitudeDelta = 0.04250270688370961;  
 
 export default class PickLocation extends Component{
 
@@ -14,10 +15,10 @@ export default class PickLocation extends Component{
     super();
     this.state = {
       region: {
-        latitude: 37.78825,
-        longitude: -122.4324,
-        latitudeDelta: 0.0922,
-        longitudeDelta: 0.0421,
+        latitude: -6.1955531,
+        longitude: 106.799552,
+        latitudeDelta: latitudeDelta,
+        longitudeDelta:  latitudeDelta * (width / height),
       },
     };
   }
@@ -109,6 +110,7 @@ export default class PickLocation extends Component{
         <MapView
           style={styles.map}
           onRegionChange={this.onRegionChange.bind(this)}
+          showsUserLocation={true}
           region={this.state.region}
         >
 
