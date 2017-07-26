@@ -1,0 +1,33 @@
+{
+	"name": "BukanMessenger",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "node node_modules/react-native/local-cli/cli.js start",
+		"test": "jest"
+	},
+	"dependencies": {
+		"libphonenumber-js": "^0.4.23",
+		"moment": "^2.18.1",
+		"native-base": "^2.3.0",
+		"react": "16.0.0-alpha.12",
+		"react-native": "0.46.4",
+		"react-native-contacts": "^0.8.2",
+		"react-native-country-code-telephone-input": "0.0.9",
+		"react-native-gifted-chat": "^0.2.2",
+		"react-native-google-places-autocomplete": "^1.2.12",
+		"react-native-maps": "^0.15.3",
+		"react-native-meteor": "^1.1.0",
+		"react-native-meteor-redux": "^2.2.0",
+		"react-native-navigation": "^1.1.142"
+	},
+	"devDependencies": {
+		"babel-jest": "20.0.3",
+		"babel-preset-react-native": "2.1.0",
+		"jest": "20.0.4",
+		"react-test-renderer": "16.0.0-alpha.12"
+	},
+	"jest": {
+		"preset": "react-native"
+	}
+}
