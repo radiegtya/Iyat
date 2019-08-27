@@ -1,121 +1,79 @@
 
 <h1 align="center">
-  <img src="./logo.png"/><br>
+  <img src="./logo.png" width="250"/><br>
 </h1>
 
 ## Important
 This project is still on very early development stage. If you want to use for production, use it with your own risk.
 <br>More feature Coming Really Soon.
 
-## BukanMessenger
-BukanMessenger is a Messenger app build on top React Native and Meteor Js. 
-It is customizeable and some new feature will coming soon every week.
+## Iyat
+Iyat is a Vacum Toilet Truck Finder App. We are ready to help, when Your 💩💩💩 stuck in your water closet.  
 
-<div align="center">
-  <img src="https://github.com/radiegtya/BukanMessenger/blob/master/demo.gif?raw=true" width="300">&nbsp;&nbsp;&nbsp;&nbsp;
-</div>
+Click to Watch Video on Youtube: 
+[![Iyat Video](https://img.youtube.com/vi/f5fHm3I7Exk/0.jpg)](https://www.youtube.com/watch?v=f5fHm3I7Exk)
 
-## Why BukanMessenger?
+## Screenshots
+<img src="https://content.screencast.com/users/Radiegtya/folders/Jing/media/55fda3a2-425f-4890-b027-660a8a80285d/00000962.png" width="150" height="280" alt="Choose a Service Type"/>
+
+<img src="https://content.screencast.com/users/Radiegtya/folders/Jing/media/b8e3b04e-2a6d-421c-bf62-17573332930d/00000963.png" width="150" height="280" alt="Pick Location"/>
+
+<img src="https://content.screencast.com/users/Radiegtya/folders/Jing/media/5d6ff57a-4f5f-4f0b-93ba-e38fccc91223/00000964.png" width="150" height="280" alt="Finding the truck"/>
+
+<img src="https://content.screencast.com/users/Radiegtya/folders/Jing/media/e7f85fb0-3c45-4818-a362-ab1026d9ff44/00000965.png" width="150" height="280" alt="Order History"/>
+
+
+## Features
+* Choose a Service type
+* Pick Location
+* Finding the truck
+* Order History
+
+## Why Iyat?
+* Out of the box app of the year!
 * It's React Native, so it support android & iOS by default!
 * Simple Code, so you can easily contribute on it.
 * Meteor is one of the most starred javascript framework, and it is very easy to use
 
+## Tech Stack
+* React Native for the Mobile Frontend
+* MeteorJs as the Backend
+
 ## Prerequisites
-* Make sure You had been install NodeJs in your system https://nodejs.org/en/
-* And ofc React Native https://facebook.github.io/react-native/
+* Make sure You had been install NodeJs in your system https://nodejs.org/
+* Then install React Native https://facebook.github.io/react-native/
 * Don’t forget Meteor Js as the backend https://www.meteor.com/
 
 ## Installation & Configuration
-React Native https://github.com/radiegtya/BukanMessenger (Front-end)
-```
-$ git clone https://github.com/radiegtya/BukanMessenger
-$ cd BukanMessenger
-$ npm install
-$ react-native run-ios #or react-native run-android
-```
-Meteor https://github.com/radiegtya/BukanMessengerBackend (Back-end)
-```
-$ git clone https://github.com/radiegtya/BukanMessengerBackend
-$ cd BukanMessengerBackend
-$ meteor npm install
-$ meteor #run your meteor on http://localhost:3000
-```
+Follow these step to install
 
+**Frontend:**
+```
+$ git clone https://github.com/DumbWaysDotId/course-repo-example
+$ cd course-repo-example/frontend
+$ npm install
+$ react-native run-ios #for ios
+$ react-native run-android #for android
+```
 Open “app/Config.js”, and set the meteorUri variable as your Meteor server run at
 ```javascript
 export const meteorUri = ‘ws://localhost:3000/websocket’;
 ```
 
-## Support Us :)
+**Back-end:**
+```
+$ cd course-repo-example/backend
+$ meteor npm install
+$ meteor #run your meteor on http://localhost:3000
+```
+
+## Support Me :)
 * Star this repository :star:
-* We are Ready to give Training to You/Your company to use/modify BukanMessenger. 
-* Buy our screencast about the basic development of BukanMessenger (COMING SOON)
-* Like our facebook page https://www.facebook.com/ega.sdr
+* Hire Me https://www.linkedin.com/in/radiegtya
 
-## Roadmap
-
-Status Note:
-* Done ✅: already done completely
-* Contribute : We need Your help to contribute
-* Contribute ✅: its already done but need improvement and your contribution
-
-### SignIn Module
-
-|    Feature         | Status  |
-|--------------------|-----|
-| Phone Verification |  Done ✅    |
-| SMS to Requester   |  Contribute   |
-
-### Contacts Module
-
-|    Feature         | Status  |
-|--------------------|-----|
-| Contact List  |  Done ✅    |
-| Merge with native Contact   |  Contribute ✅  |
-| New Contact  |  Done ✅    |
-| Search Contact  |  Done ✅    |
-
-### Chats Module
-
-|    Feature         | Status  |
-|--------------------|-----|
-| Chat List |  Done ✅    |
-| Search Chat   |  Contribute ✅   |
-| New Chat |  Done ✅    |
-| New Group |  Done ✅    |
-
-### Messages Module
-
-|    Feature         | Status  |
-|--------------------|-----|
-| Messages List |  Done ✅    |
-| Send/Receive Message |  Done ✅    |
-| Edit Message |  Contribute   |
-| Reply Message |  Contribute   |
-| Delete Message |  Contribute   |
-| Forward Message |  Contribute   |
-| Info Message |  Contribute   |
-| Push Notification |  Contribute   |
-| Messages Detail & Members |  Done ✅   |
-| Date Separator |  Done ✅   |
-| Image Upload & Camera Upload |  Contribute   |
-| Video Upload |  Contribute   |
-| Video Call |  Contribute   |
-| Location Share |  Contribute   |
-
-### Settings Module
-
-|    Feature         | Status  |
-|--------------------|-----|
-| Update Profile |  Done ✅    |
-| FAQ |  Contribute ✅    |
-| Contact Us |  Contribute ✅    |
-| Set Profile Picture |  Contribute    |
-| Sign Out |  Done ✅    |
-
-## Contact us
-* WA/TELEGRAM: +6285641278479
-* email: radiegtya@yahoo.co.id
+## Contact 
+* WA/TELEGRAM: +62 8564 1278 479
+* email: radiegtya@dumbways.id
 
 ----
 
