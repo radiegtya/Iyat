@@ -1,6 +1,6 @@
 
 <h1 align="center">
-  <img src="./logo.png" width="250"/><br>
+  <img src="./logo.png" width="300"/><br>
 </h1>
 
 ## Important
@@ -17,13 +17,13 @@ Click to Watch Video on Youtube:
 ## Screenshots
 
 <p float="left">
-  <img src="https://content.screencast.com/users/Radiegtya/folders/Jing/media/55fda3a2-425f-4890-b027-660a8a80285d/00000962.png" width="150" height="280" alt="Choose a Service Type"/>
+  <img src="https://content.screencast.com/users/Radiegtya/folders/Jing/media/55fda3a2-425f-4890-b027-660a8a80285d/00000962.png" width="200" height="350" alt="Choose a Service Type"/>
 
-  <img src="https://content.screencast.com/users/Radiegtya/folders/Jing/media/b8e3b04e-2a6d-421c-bf62-17573332930d/00000963.png" width="150" height="280" alt="Pick Location"/>
+  <img src="https://content.screencast.com/users/Radiegtya/folders/Jing/media/b8e3b04e-2a6d-421c-bf62-17573332930d/00000963.png" width="200" height="350" alt="Pick Location"/>
 
-  <img src="https://content.screencast.com/users/Radiegtya/folders/Jing/media/5d6ff57a-4f5f-4f0b-93ba-e38fccc91223/00000964.png" width="150" height="280" alt="Finding the truck"/>
+  <img src="https://content.screencast.com/users/Radiegtya/folders/Jing/media/5d6ff57a-4f5f-4f0b-93ba-e38fccc91223/00000964.png" width="200" height="350" alt="Finding the truck"/>
 
-  <img src="https://content.screencast.com/users/Radiegtya/folders/Jing/media/e7f85fb0-3c45-4818-a362-ab1026d9ff44/00000965.png" width="150" height="280" alt="Order History"/>
+  <img src="https://content.screencast.com/users/Radiegtya/folders/Jing/media/e7f85fb0-3c45-4818-a362-ab1026d9ff44/00000965.png" width="200" height="350" alt="Order History"/>
 </p>
 
 
