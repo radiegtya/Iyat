@@ -10,17 +10,21 @@ This project is still on very early development stage. If you want to use for pr
 ## Iyat
 Iyat is a Vacum Toilet Truck Finder App. We are ready to help, when Your 💩💩💩 stuck in your water closet.  
 
-Click to Watch Video on Youtube: 
+Click to Watch Video on Youtube:
+
 [![Iyat Video](https://img.youtube.com/vi/f5fHm3I7Exk/0.jpg)](https://www.youtube.com/watch?v=f5fHm3I7Exk)
 
 ## Screenshots
-<img src="https://content.screencast.com/users/Radiegtya/folders/Jing/media/55fda3a2-425f-4890-b027-660a8a80285d/00000962.png" width="150" height="280" alt="Choose a Service Type"/>
 
-<img src="https://content.screencast.com/users/Radiegtya/folders/Jing/media/b8e3b04e-2a6d-421c-bf62-17573332930d/00000963.png" width="150" height="280" alt="Pick Location"/>
+<p float="left">
+  <img src="https://content.screencast.com/users/Radiegtya/folders/Jing/media/55fda3a2-425f-4890-b027-660a8a80285d/00000962.png" width="150" height="280" alt="Choose a Service Type"/>
 
-<img src="https://content.screencast.com/users/Radiegtya/folders/Jing/media/5d6ff57a-4f5f-4f0b-93ba-e38fccc91223/00000964.png" width="150" height="280" alt="Finding the truck"/>
+  <img src="https://content.screencast.com/users/Radiegtya/folders/Jing/media/b8e3b04e-2a6d-421c-bf62-17573332930d/00000963.png" width="150" height="280" alt="Pick Location"/>
 
-<img src="https://content.screencast.com/users/Radiegtya/folders/Jing/media/e7f85fb0-3c45-4818-a362-ab1026d9ff44/00000965.png" width="150" height="280" alt="Order History"/>
+  <img src="https://content.screencast.com/users/Radiegtya/folders/Jing/media/5d6ff57a-4f5f-4f0b-93ba-e38fccc91223/00000964.png" width="150" height="280" alt="Finding the truck"/>
+
+  <img src="https://content.screencast.com/users/Radiegtya/folders/Jing/media/e7f85fb0-3c45-4818-a362-ab1026d9ff44/00000965.png" width="150" height="280" alt="Order History"/>
+</p>
 
 
 ## Features
