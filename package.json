@@ -11,7 +11,7 @@
 		"moment": "^2.18.1",
 		"native-base": "^2.3.0",
 		"react": "16.0.0-alpha.12",
-		"react-native": "0.46.4",
+		"react-native": "0.70.6",
 		"react-native-contacts": "^0.8.2",
 		"react-native-country-code-telephone-input": "0.0.9",
 		"react-native-geocoder": "^0.4.8",
@@ -23,9 +23,9 @@
 		"react-native-navigation": "^1.1.142"
 	},
 	"devDependencies": {
-		"babel-jest": "20.0.3",
+		"babel-jest": "29.3.1",
 		"babel-preset-react-native": "2.1.0",
-		"jest": "20.0.4",
+		"jest": "29.3.1",
 		"react-test-renderer": "16.0.0-alpha.12"
 	},
 	"jest": {
